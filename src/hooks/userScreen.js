@@ -13,7 +13,7 @@ export default function useScreen(id) {
   onMounted(() => {
     dom = document.getElementById(id);
     width.value = dom.clientWidth;
-    height.vlaue = dom.clientHeight;
+    height.value = dom.clientHeight;
   });
   return {
     width,

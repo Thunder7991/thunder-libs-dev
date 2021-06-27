@@ -22,7 +22,7 @@ var script$b = {
 const _withId$a = /*#__PURE__*/withScopeId("data-v-653ba654");
 
 pushScopeId("data-v-653ba654");
-const _hoisted_1$7 = /*#__PURE__*/createVNode("svg", {
+const _hoisted_1$6 = /*#__PURE__*/createVNode("svg", {
   width: "0",
   height: "0",
   viewBox: "0 0 100 100"
@@ -103,7 +103,7 @@ popScopeId();
 
 const render$b = /*#__PURE__*/_withId$a((_ctx, _cache, $props, $setup, $data, $options) => {
   return (openBlock(), createBlock("div", null, [
-    _hoisted_1$7
+    _hoisted_1$6
   ]))
 });
 
@@ -160,11 +160,11 @@ var script$a = {
 const _withId$9 = /*#__PURE__*/withScopeId("data-v-2ccf16d6");
 
 pushScopeId("data-v-2ccf16d6");
-const _hoisted_1$6 = { class: "test" };
+const _hoisted_1$5 = { class: "test" };
 popScopeId();
 
 const render$a = /*#__PURE__*/_withId$9((_ctx, _cache, $props, $setup, $data, $options) => {
-  return (openBlock(), createBlock("div", _hoisted_1$6, toDisplayString($setup.message), 1 /* TEXT */))
+  return (openBlock(), createBlock("div", _hoisted_1$5, toDisplayString($setup.message), 1 /* TEXT */))
 });
 
 var css_248z$9 = ".test[data-v-2ccf16d6] {\n  color: red;\n}";
@@ -193,11 +193,11 @@ var script$9 = {
 const _withId$8 = /*#__PURE__*/withScopeId("data-v-7c7c3dd0");
 
 pushScopeId("data-v-7c7c3dd0");
-const _hoisted_1$5 = { class: "test" };
+const _hoisted_1$4 = { class: "test" };
 popScopeId();
 
 const render$9 = /*#__PURE__*/_withId$8((_ctx, _cache, $props, $setup, $data, $options) => {
-  return (openBlock(), createBlock("div", _hoisted_1$5, toDisplayString($setup.message), 1 /* TEXT */))
+  return (openBlock(), createBlock("div", _hoisted_1$4, toDisplayString($setup.message), 1 /* TEXT */))
 });
 
 var css_248z$8 = ".test[data-v-7c7c3dd0] {\n  color: red;\n}";
@@ -264,7 +264,7 @@ var script$7 = {
 const _withId$6 = /*#__PURE__*/withScopeId("data-v-f7dca322");
 
 pushScopeId("data-v-f7dca322");
-const _hoisted_1$4 = /*#__PURE__*/createVNode("div", { class: "container" }, [
+const _hoisted_1$3 = /*#__PURE__*/createVNode("div", { class: "container" }, [
   /*#__PURE__*/createVNode("svg", {
     width: "500",
     height: "200",
@@ -696,7 +696,7 @@ popScopeId();
 
 const render$7 = /*#__PURE__*/_withId$6((_ctx, _cache, $props, $setup, $data, $options) => {
   return (openBlock(), createBlock("div", null, [
-    _hoisted_1$4,
+    _hoisted_1$3,
     _hoisted_2$2,
     _hoisted_3$1,
     _hoisted_4,
@@ -762,12 +762,12 @@ var script$6 = {
 const _withId$5 = /*#__PURE__*/withScopeId("data-v-46ff08e2");
 
 pushScopeId("data-v-46ff08e2");
-const _hoisted_1$3 = { class: "thunder-loading" };
+const _hoisted_1$2 = { class: "thunder-loading" };
 const _hoisted_2$1 = { class: "thunder-loading-content" };
 popScopeId();
 
 const render$6 = /*#__PURE__*/_withId$5((_ctx, _cache, $props, $setup, $data, $options) => {
-  return (openBlock(), createBlock("div", _hoisted_1$3, [
+  return (openBlock(), createBlock("div", _hoisted_1$2, [
     createCommentVNode(" stroke-dasharray : 2 π r / 需要展示的部分(4) "),
     (openBlock(), createBlock("svg", {
       width: $props.width,
@@ -971,7 +971,7 @@ var script$5 = {
 const _withId$4 = /*#__PURE__*/withScopeId("data-v-11d53d6e");
 
 pushScopeId("data-v-11d53d6e");
-const _hoisted_1$2 = /*#__PURE__*/createVNode("stop", {
+const _hoisted_1$1 = /*#__PURE__*/createVNode("stop", {
   offset: "0%",
   "stop-color": "#fff",
   "stop-opacity": "1"
@@ -1008,7 +1008,7 @@ const render$5 = /*#__PURE__*/_withId$4((_ctx, _cache, $props, $setup, $data, $o
           fy: "50%",
           r: "50%"
         }, [
-          _hoisted_1$2,
+          _hoisted_1$1,
           _hoisted_2
         ], 8 /* PROPS */, ["id"]),
         createVNode("mask", { id: $setup.maskId }, [
@@ -1219,14 +1219,14 @@ var script$3 = {
 const _withId$2 = /*#__PURE__*/withScopeId("data-v-20df31af");
 
 pushScopeId("data-v-20df31af");
-const _hoisted_1$1 = {
+const _hoisted_1 = {
   class: "thunder-logo",
   viewBox: "0 0 1061 1024"
 };
 popScopeId();
 
 const render$3 = /*#__PURE__*/_withId$2((_ctx, _cache, $props, $setup, $data, $options) => {
-  return (openBlock(), createBlock("svg", _hoisted_1$1, [
+  return (openBlock(), createBlock("svg", _hoisted_1, [
     createVNode("path", {
       class: "thunder-logo1",
       stroke: $props.stroke,
@@ -1561,7 +1561,7 @@ function useScreen(id) {
   onMounted(function () {
     dom = document.getElementById(id);
     width.value = dom.clientWidth;
-    height.vlaue = dom.clientHeight;
+    height.value = dom.clientHeight;
   });
   return {
     width: width,
@@ -4667,6 +4667,45 @@ var assign = createAssigner(function (object, source) {
 });
 var assign_1 = assign;
 
+const defaultConfig = {
+  //标题的数据
+  headerData: [],
+  //标题的样式
+  headerStyle: [],
+  //标题的背景颜色
+  headerBg: 'rgb(90,90,90)',
+  // 标题的高度
+  headerHeight: 35,
+  //标题是否展示
+  headerIndex: false,
+  //序号列标题的内容
+  headerIndexContext: '#',
+  //序号列头部的样式
+  headerIndexStyle: {
+    width: '50px',
+  },
+  //存储序号列
+  headerIndexData: [],
+  //序号列内容的展示
+  rowIndexStyle: {
+    width: '50px',
+  },
+  data: [], //二维数组
+  //显示的数据量(行数)
+  rowNum: 0,
+  //每行的样式
+  rowStyle: [],
+  //奇数和偶数的背景颜色
+  rowBg: [],
+  //居中方式
+  aligns: [],
+  headerFontSize: 28,
+  rowFontSize: 28,
+  headerColor: '#fff',
+  rowColor: '#000',
+  moveNumber: 1, //移动的位置
+  duration: 2000, //动画间隔时间
+};
 var script = {
   name: 'BaseScrollList',
   props: {
@@ -4678,63 +4717,175 @@ var script = {
   setup(props, ctx) {
     const id = `scroll-list-${v4()}`;
     const { width, height } = useScreen(id);
-    const defaultConfig = {
-      //标题的数据
-      headerData: [],
-      //标题的样式
-      headerStyle: [],
-      //标题的背景颜色
-      headerBg: 'rgb(90,90,90)',
-      // 标题的高度
-      headerHeight: 35,
-      //标题是否展示
-      headerIndex: false,
-      headerIndexContext: '#',
-      headerIndexStyle: {
-        width:'50px'
-      },
-    };
     const actualConfig = ref([]);
     const headerData = ref([]);
     const headerStyle = ref([]);
+    const rowStyle = ref([]);
     const columnWidths = ref([]);
+    const rowHeights = ref([]);
+    const rowsData = ref([]);
+    const rowBg = ref([]);
+    const rowNum = ref(defaultConfig.rowNum);
+    const aligns = ref([]);
+    const currentRowsData = ref([]); //
+    const currentIndex = ref(0); //动画指针
+    const isAnimationStart = ref(true);
+    let avgHeight;
     const handleHeader = (config) => {
       const _headerData = cloneDeep_1(config.headerData);
       const _headerStyle = cloneDeep_1(config.headerStyle);
+      const _rowStyle = cloneDeep_1(config.rowStyle);
+      const _aligns = cloneDeep_1(config.aligns);
+      // rowStyle
+      const _rowsData = cloneDeep_1(config.data);
       if (_headerData.length === 0) {
         return;
       }
       if (config.headerIndex) {
         _headerData.unshift(config.headerIndexContext);
         _headerStyle.unshift(config.headerIndexStyle);
+        _rowStyle.unshift(config.rowIndexStyle);
+        _rowsData.forEach((rows, index) => {
+          //处理序号列的数据
+          if (config.headerIndexData && config.headerIndexData.length > 0 && config.headerIndexData[index]) {
+            rows.unshift(config.headerIndexData[index]);
+          } else {
+            rows.unshift(index + 1);
+          }
+        });
+        _aligns.unshift('center');
       }
       //动态计算header中没一列的宽度 (因为unshift元素后需要重新计算宽高)
-      const avgWidth = width.value / _headerData.length;
+      let usedWidth = 0; // 记录父级元素剩余的width宽度
+      let usedColmnNum = 0;
+      _headerStyle.forEach((style, index) => {
+        if (style.width) {
+          usedWidth = +style.width.replace('px', '');
+          usedColmnNum++; //获取设置width属性的元素数量
+        }
+      });
+      //动态计算列款时: 剩余的宽度 / 剩余无width元素的个数
+      const avgWidth = (width.value - usedWidth) / (_headerData.length - usedColmnNum);
       const _columnWidth = new Array(_headerData.length).fill(avgWidth);
+      _headerStyle.forEach((style, index) => {
+        if (style.width) {
+          const headerWidth = +style.width.replace('px', '');
+          // usedColumnNum++; //获取设置width属性的元素数量
+          _columnWidth[index] = headerWidth;
+        }
+      });
       columnWidths.value = _columnWidth;
       headerData.value = _headerData;
       headerStyle.value = _headerStyle;
+      rowStyle.value = _rowStyle;
+
+      const { rowNum } = config;
+      if (_rowsData.length >= rowNum && _rowsData.length < rowNum * 2) {
+        const newRowData = [..._rowsData, ..._rowsData];
+        rowsData.value = newRowData.map((item, index) => ({
+          data: item,
+          rowIndex: index,
+        }));
+      } else {
+        rowsData.value = _rowsData.map((item, index) => ({
+          data: item,
+          rowIndex: index,
+        }));
+      }
+
+      aligns.value = _aligns;
     };
-    onMounted(() => {
+    //赋值rowsData
+    const handleRows = (config) => {
+      //动态计算每行数据的高度
+      const { headerHeight } = config;
+      rowNum.value = config.rowNum;
+      console.log(height.value);
+      const unusedHeight = height.value - headerHeight;
+      //如果rowNum大于实际的数据长度,则以实际数据长度为准
+      if (rowNum.value > rowsData.value.length) {
+        avgHeight = unusedHeight / rowsData.value.length;
+        rowNum.value = rowsData.value.length;
+      }
+      avgHeight = unusedHeight / rowNum.value; //平均高度F
+      rowHeights.value = new Array(rowNum.value).fill(avgHeight);
+
+      //获取行背景色
+      if (config.rowBg) {
+        rowBg.value = config.rowBg;
+      }
+    };
+
+    const startAnimation = async () => {
+      if (!isAnimationStart) return;
+      const config = actualConfig.value;
+      const { rowNum, moveNumber, duration } = config;
+      const totalLength = rowsData.value.length;
+      if (totalLength < rowNum) return;
+      const index = currentIndex.value;
+      const _rowsData = cloneDeep_1(rowsData.value);
+      //将数据重新头尾连接
+      const rows = _rowsData.slice(index);
+      rows.push(..._rowsData.slice(0, index));
+      currentRowsData.value = rows;
+      //先将所有行高度还原
+      rowHeights.value = new Array(totalLength).fill(avgHeight);
+      const waitTime = 300;
+      if (!isAnimationStart) return;
+      await new Promise((resolve) => setTimeout(resolve, waitTime));
+      //将moveNumber的航高度设置为0
+      rowHeights.value.splice(0, moveNumber, ...new Array(moveNumber).fill(0));
+      currentIndex.value += moveNumber;
+      //是否到达最后一组数据
+      const isLast = currentIndex.value - totalLength;
+      //解决移动的次数大于1
+      if (isLast >= 0) {
+        currentIndex.value = isLast;
+      }
+      if (!isAnimationStart) return;
+      //延迟操作 sleep休眠
+      await new Promise((resolve) => setTimeout(resolve, duration - waitTime));
+      if (!isAnimationStart) return;
+      await startAnimation();
+    };
+    const stopAnimation = () => {
+      isAnimationStart.value = false;
+    };
+    const update = () => {
+      stopAnimation();
       const _actualConfig = assign_1(defaultConfig, props.config);
+      rowsData.value = _actualConfig.data || [];
       handleHeader(_actualConfig);
+      handleRows(_actualConfig);
       actualConfig.value = _actualConfig;
-    });
+      //展示动画
+      isAnimationStart.value = true;
+      startAnimation();
+    };
+    watch(
+      () => props.config,
+      () => {
+        update();
+      }
+    );
     return {
       id,
       headerData,
       headerStyle,
       actualConfig,
-      columnWidths
+      columnWidths,
+      rowsData,
+      rowHeights,
+      rowStyle,
+      rowBg,
+      aligns,
+      currentRowsData,
+      height,
     };
   },
 };
 
 const _withId = /*#__PURE__*/withScopeId("data-v-69eed30f");
-
-pushScopeId("data-v-69eed30f");
-const _hoisted_1 = /*#__PURE__*/createVNode("div", { class: "base-scroll-list-rows" }, null, -1 /* HOISTED */);
-popScopeId();
 
 const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $options) => {
   return (openBlock(), createBlock("div", {
@@ -4743,22 +4894,58 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
   }, [
     createVNode("div", {
       class: "base-scroll-list-header",
-      style: { backgroundColor: $props.config.headerBg, height: `${$props.config.headerHeight}px` }
+      style: {
+        backgroundColor: $setup.actualConfig.headerBg,
+        height: `${$setup.actualConfig.headerHeight}px`,
+        fontSize: `${$setup.actualConfig.headerFontSize}px`,
+        color: $setup.actualConfig.headerColor,
+      }
     }, [
       (openBlock(true), createBlock(Fragment, null, renderList($setup.headerData, (headerItem, i) => {
         return (openBlock(), createBlock("div", {
           class: "header-item base-scroll-list-text",
           key: headerItem + i,
-          style: {width:`${$setup.columnWidths[i]}px`,...$setup.headerStyle[i]},
-          innerHTML: headerItem
-        }, null, 12 /* STYLE, PROPS */, ["innerHTML"]))
+          style: { width: `${$setup.columnWidths[i]}px`, ...$setup.headerStyle[i] },
+          innerHTML: headerItem,
+          align: $setup.aligns[i]
+        }, null, 12 /* STYLE, PROPS */, ["innerHTML", "align"]))
       }), 128 /* KEYED_FRAGMENT */))
     ], 4 /* STYLE */),
-    _hoisted_1
+    createVNode("div", {
+      class: "base-scroll-list-rows-wrapper",
+      style: { height: `${$setup.height - $setup.actualConfig.headerHeight}px` }
+    }, [
+      (openBlock(true), createBlock(Fragment, null, renderList($setup.currentRowsData, (rowData, index) => {
+        return (openBlock(), createBlock("div", {
+          class: "base-scroll-list-rows",
+          key: rowData.rowIndex,
+          style: {
+          height: `${$setup.rowHeights[index]}px`,
+          backgroundColor: rowData.rowIndex % 2 === 0 ? $setup.rowBg[1] : $setup.rowBg[0],
+          fontSize: `${$setup.actualConfig.rowFontSize}px`,
+          color: $setup.actualConfig.rowColor,
+          lineHeight: `${$setup.rowHeights[index]}px`,
+        }
+        }, [
+          (openBlock(true), createBlock(Fragment, null, renderList(rowData.data, (cloData, colIndex) => {
+            return (openBlock(), createBlock("div", {
+              class: "base-scroll-list-colums base-scroll-list-text",
+              innerHTML: cloData,
+              key: cloData + colIndex,
+              style: {
+            width: `${$setup.columnWidths[colIndex]}px`,
+            ...$setup.rowStyle[colIndex],
+          },
+              align: $setup.aligns[colIndex]
+            }, null, 12 /* STYLE, PROPS */, ["innerHTML", "align"]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ], 4 /* STYLE */))
+      }), 128 /* KEYED_FRAGMENT */))
+    ], 4 /* STYLE */)
   ], 8 /* PROPS */, ["id"]))
 });
 
-var css_248z = ".scroll-list[data-v-69eed30f] {\n  width: 100%;\n  height: 100%;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-text[data-v-69eed30f] {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  padding: 0 10px;\n  box-sizing: border-box;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-header[data-v-69eed30f] {\n  display: flex;\n  font-size: 15px;\n  align-items: center;\n}\n.scroll-list[data-v-69eed30f] .header-item[data-v-69eed30f] {\n  width: 150px;\n}";
+var css_248z = ".scroll-list[data-v-69eed30f] {\n  width: 100%;\n  height: 100%;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-text[data-v-69eed30f] {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  box-sizing: border-box;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-header[data-v-69eed30f] {\n  display: flex;\n  font-size: 15px;\n  align-items: center;\n}\n.scroll-list[data-v-69eed30f] .header-item[data-v-69eed30f] {\n  width: 150px;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-rows-wrapper[data-v-69eed30f] {\n  overflow: hidden;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-rows-wrapper[data-v-69eed30f] .base-scroll-list-rows[data-v-69eed30f] {\n  display: flex;\n  align-items: center;\n  transition: all 0.3s linear;\n}\n.scroll-list[data-v-69eed30f] .base-scroll-list-rows-wrapper[data-v-69eed30f] .base-scroll-list-rows[data-v-69eed30f] .base-scroll-list-colums[data-v-69eed30f] {\n  height: 100%;\n}";
 styleInject(css_248z);
 
 script.render = render;
