@@ -278,7 +278,6 @@ export default {
   setup(props, ctx) {
     onMounted(() => {
       const logo = document.getElementsByClassName('logo')[0];
-      console.log(logo.getTotalLength());
     });
     return {};
   },

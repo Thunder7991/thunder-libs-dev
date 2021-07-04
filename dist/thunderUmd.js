@@ -279,8 +279,7 @@
     porps: {},
     setup(props, ctx) {
       vue.onMounted(() => {
-        const logo = document.getElementsByClassName('logo')[0];
-        console.log(logo.getTotalLength());
+        document.getElementsByClassName('logo')[0];
       });
       return {};
     },
@@ -773,7 +772,6 @@
       },
     },
     setup(props, ctx) {
-      console.log(props);
       const outsideColorAnimation = vue.computed(() => `${props.outsideColor};${props.insideColor};${props.outsideColor}`);
       const insideColorAnimation = vue.computed(() => `${props.insideColor};${props.outsideColor};${props.insideColor}`);
 
@@ -947,11 +945,11 @@
         type: String,
         default: '#235fa7',
       },
-      starColor: {
+      startColor: {
         type: String,
         default: '#4fd2dd',
       },
-      starLength: {
+      startLength: {
         type: [Number, String],
         default: 50,
       },
@@ -1020,11 +1018,13 @@
         viewBox: `0 0 ${$setup.width} ${$setup.height}`
       }, [
         vue.createVNode("defs", null, [
+          vue.createCommentVNode(" path：元素是用来定义形状的通用元素。所有的基本形状都可以用path元素来创建。"),
           vue.createVNode("path", {
             id: $setup.pathId,
             d: $setup.path,
             fill: "none"
           }, null, 8 /* PROPS */, ["id", "d"]),
+          vue.createCommentVNode("radialGradient: 用来定义径向渐变，以对图形元素进行填充或描边。 "),
           vue.createVNode("radialGradient", {
             id: $setup.radialGradientId,
             cx: "50%",
@@ -1036,9 +1036,10 @@
             _hoisted_1$1,
             _hoisted_2
           ], 8 /* PROPS */, ["id"]),
+          vue.createCommentVNode(" mask:蒙版 "),
           vue.createVNode("mask", { id: $setup.maskId }, [
             vue.createVNode("circle", {
-              r: $props.starLength,
+              r: $props.startLength,
               cx: "0",
               cy: "0",
               fill: `url(#${$setup.radialGradientId})`
@@ -1060,7 +1061,7 @@
         vue.createVNode("use", {
           href: `#${$setup.pathId}`,
           "stroke-width": "3",
-          stroke: $props.starColor,
+          stroke: $props.startColor,
           mask: `url(#${$setup.maskId})`
         }, null, 8 /* PROPS */, ["href", "stroke", "mask"])
       ], 8 /* PROPS */, ["width", "height", "viewBox"])),
@@ -1126,7 +1127,6 @@
             if (!originalWidth.value || !originalHeight.value) {
               //在没有复制的情况下调用次函数
               originalWidth.value = window.screen.width;
-              console.log(originalWidth.value);
               originalHeight.value = window.screen.height;
             }
             resolve();
@@ -1234,8 +1234,7 @@
     },
     setup(props, ctx) {
       vue.onMounted(() => {
-        const logo = document.getElementsByClassName('thunder-logo1')[0];
-        console.log(logo.getTotalLength()); //3239
+        document.getElementsByClassName('thunder-logo1')[0];
       });
       return {};
     },
@@ -4692,45 +4691,6 @@
   });
   var assign_1 = assign;
 
-  const defaultConfig = {
-    //标题的数据
-    headerData: [],
-    //标题的样式
-    headerStyle: [],
-    //标题的背景颜色
-    headerBg: 'rgb(90,90,90)',
-    // 标题的高度
-    headerHeight: 35,
-    //标题是否展示
-    headerIndex: false,
-    //序号列标题的内容
-    headerIndexContext: '#',
-    //序号列头部的样式
-    headerIndexStyle: {
-      width: '50px',
-    },
-    //存储序号列
-    headerIndexData: [],
-    //序号列内容的展示
-    rowIndexStyle: {
-      width: '50px',
-    },
-    data: [], //二维数组
-    //显示的数据量(行数)
-    rowNum: 0,
-    //每行的样式
-    rowStyle: [],
-    //奇数和偶数的背景颜色
-    rowBg: [],
-    //居中方式
-    aligns: [],
-    headerFontSize: 28,
-    rowFontSize: 28,
-    headerColor: '#fff',
-    rowColor: '#000',
-    moveNumber: 1, //移动的位置
-    duration: 2000, //动画间隔时间
-  };
   var script = {
     name: 'BaseScrollList',
     props: {
@@ -4740,6 +4700,46 @@
       },
     },
     setup(props, ctx) {
+     
+      const defaultConfig = {
+        //标题的数据
+        headerData: [],
+        //标题的样式
+        headerStyle: [],
+        //标题的背景颜色
+        headerBg: 'rgb(90,90,90)',
+        // 标题的高度
+        headerHeight: 35,
+        //标题是否展示
+        headerIndex: false,
+        //序号列标题的内容
+        headerIndexContext: '#',
+        //序号列头部的样式
+        headerIndexStyle: {
+          width: '50px',
+        },
+        //存储序号列
+        headerIndexData: [],
+        //序号列内容的展示
+        rowIndexStyle: {
+          width: '50px',
+        },
+        data: [], //二维数组
+        //显示的数据量(行数)
+        rowNum: 5,
+        //每行的样式
+        rowStyle: [],
+        //奇数和偶数的背景颜色
+        rowBg: [],
+        //居中方式
+        aligns: [],
+        headerFontSize: 28,
+        rowFontSize: 28,
+        headerColor: '#fff',
+        rowColor: '#000',
+        moveNumber: 1, //移动的位置
+        duration: 2000, //动画间隔时间
+      };
       const id = `scroll-list-${v4()}`;
       const { width, height } = useScreen(id);
       const actualConfig = vue.ref([]);
@@ -4757,26 +4757,30 @@
       const isAnimationStart = vue.ref(true);
       let avgHeight;
       const handleHeader = (config) => {
-        const _headerData = cloneDeep_1(config.headerData);
+        let _headerData = cloneDeep_1(config.headerData);
         const _headerStyle = cloneDeep_1(config.headerStyle);
         const _rowStyle = cloneDeep_1(config.rowStyle);
         const _aligns = cloneDeep_1(config.aligns);
         // rowStyle
         const _rowsData = cloneDeep_1(config.data);
+
         if (_headerData.length === 0) {
-          return;
+        _headerData=  new Array(_rowsData[0].length).fill([]);
         }
         if (config.headerIndex) {
           _headerData.unshift(config.headerIndexContext);
           _headerStyle.unshift(config.headerIndexStyle);
           _rowStyle.unshift(config.rowIndexStyle);
+          
           _rowsData.forEach((rows, index) => {
+      
             //处理序号列的数据
             if (config.headerIndexData && config.headerIndexData.length > 0 && config.headerIndexData[index]) {
               rows.unshift(config.headerIndexData[index]);
             } else {
               rows.unshift(index + 1);
             }
+          
           });
           _aligns.unshift('center');
         }
@@ -4803,19 +4807,22 @@
         headerData.value = _headerData;
         headerStyle.value = _headerStyle;
         rowStyle.value = _rowStyle;
-
         const { rowNum } = config;
-        if (_rowsData.length >= rowNum && _rowsData.length < rowNum * 2) {
+        // rowNum:默认是10 _rowsData.length是23
+        if (_rowsData.length >= rowNum) {
           const newRowData = [..._rowsData, ..._rowsData];
           rowsData.value = newRowData.map((item, index) => ({
             data: item,
             rowIndex: index,
           }));
         } else {
-          rowsData.value = _rowsData.map((item, index) => ({
-            data: item,
-            rowIndex: index,
-          }));
+          rowsData.value = _rowsData.map((item, index) => {
+            return {
+              data: item,
+              rowIndex: index,
+            };
+          });
+
         }
 
         aligns.value = _aligns;
@@ -4825,7 +4832,6 @@
         //动态计算每行数据的高度
         const { headerHeight } = config;
         rowNum.value = config.rowNum;
-        console.log(height.value);
         const unusedHeight = height.value - headerHeight;
         //如果rowNum大于实际的数据长度,则以实际数据长度为准
         if (rowNum.value > rowsData.value.length) {
@@ -4834,21 +4840,20 @@
         }
         avgHeight = unusedHeight / rowNum.value; //平均高度F
         rowHeights.value = new Array(rowNum.value).fill(avgHeight);
-
         //获取行背景色
         if (config.rowBg) {
           rowBg.value = config.rowBg;
         }
       };
-
       const startAnimation = async () => {
-        if (!isAnimationStart) return;
+        if (!isAnimationStart.value) return;
         const config = actualConfig.value;
         const { rowNum, moveNumber, duration } = config;
         const totalLength = rowsData.value.length;
         if (totalLength < rowNum) return;
         const index = currentIndex.value;
         const _rowsData = cloneDeep_1(rowsData.value);
+
         //将数据重新头尾连接
         const rows = _rowsData.slice(index);
         rows.push(..._rowsData.slice(0, index));
@@ -4856,7 +4861,7 @@
         //先将所有行高度还原
         rowHeights.value = new Array(totalLength).fill(avgHeight);
         const waitTime = 300;
-        if (!isAnimationStart) return;
+        if (!isAnimationStart.value) return;
         await new Promise((resolve) => setTimeout(resolve, waitTime));
         //将moveNumber的航高度设置为0
         rowHeights.value.splice(0, moveNumber, ...new Array(moveNumber).fill(0));
@@ -4867,15 +4872,17 @@
         if (isLast >= 0) {
           currentIndex.value = isLast;
         }
-        if (!isAnimationStart) return;
+        if (!isAnimationStart.value) return;
         //延迟操作 sleep休眠
         await new Promise((resolve) => setTimeout(resolve, duration - waitTime));
-        if (!isAnimationStart) return;
-        await startAnimation();
+        if (!isAnimationStart.value) return;
+        // stopAnimation()
+        // await startAnimation();
       };
       const stopAnimation = () => {
         isAnimationStart.value = false;
       };
+     
       const update = () => {
         stopAnimation();
         const _actualConfig = assign_1(defaultConfig, props.config);
@@ -4887,6 +4894,8 @@
         isAnimationStart.value = true;
         startAnimation();
       };
+       vue.onMounted(() =>{
+      });
       vue.watch(
         () => props.config,
         () => {
@@ -4917,28 +4926,31 @@
       class: "scroll-list",
       id: $setup.id
     }, [
-      vue.createVNode("div", {
-        class: "base-scroll-list-header",
-        style: {
+      ($setup.actualConfig.showMenu)
+        ? (vue.openBlock(), vue.createBlock("div", {
+            key: 0,
+            class: "base-scroll-list-header",
+            style: {
           backgroundColor: $setup.actualConfig.headerBg,
           height: `${$setup.actualConfig.headerHeight}px`,
           fontSize: `${$setup.actualConfig.headerFontSize}px`,
           color: $setup.actualConfig.headerColor,
         }
-      }, [
-        (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($setup.headerData, (headerItem, i) => {
-          return (vue.openBlock(), vue.createBlock("div", {
-            class: "header-item base-scroll-list-text",
-            key: headerItem + i,
-            style: { width: `${$setup.columnWidths[i]}px`, ...$setup.headerStyle[i] },
-            innerHTML: headerItem,
-            align: $setup.aligns[i]
-          }, null, 12 /* STYLE, PROPS */, ["innerHTML", "align"]))
-        }), 128 /* KEYED_FRAGMENT */))
-      ], 4 /* STYLE */),
+          }, [
+            (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($setup.headerData, (headerItem, i) => {
+              return (vue.openBlock(), vue.createBlock("div", {
+                class: "header-item base-scroll-list-text",
+                key: headerItem + i,
+                style: { width: `${$setup.columnWidths[i]}px`, ...$setup.headerStyle[i] },
+                innerHTML: headerItem,
+                align: $setup.aligns[i]
+              }, null, 12 /* STYLE, PROPS */, ["innerHTML", "align"]))
+            }), 128 /* KEYED_FRAGMENT */))
+          ], 4 /* STYLE */))
+        : vue.createCommentVNode("v-if", true),
       vue.createVNode("div", {
         class: "base-scroll-list-rows-wrapper",
-        style: { height: `${$setup.height - $setup.actualConfig.headerHeight}px` }
+        style: { height:$setup.actualConfig.showMenu? `${$setup.height - $setup.actualConfig.headerHeight}px`: `${$setup.height}px` }
       }, [
         (vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($setup.currentRowsData, (rowData, index) => {
           return (vue.openBlock(), vue.createBlock("div", {

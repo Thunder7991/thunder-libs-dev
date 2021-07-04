@@ -2,19 +2,22 @@
   <div class="thunder-flybox" :ref="refName">
     <svg :width="width" :height="height" :viewBox="`0 0 ${width} ${height}`">
       <defs>
+        <!-- path：元素是用来定义形状的通用元素。所有的基本形状都可以用path元素来创建。-->
         <path :id="pathId" :d="path" fill="none"></path>
+        <!--radialGradient: 用来定义径向渐变，以对图形元素进行填充或描边。 -->
         <radialGradient :id="radialGradientId" cx="50%" cy="50%" fx="100%" fy="50%" r="50%">
           <stop offset="0%" stop-color="#fff" stop-opacity="1"></stop>
           <stop offset="100%" stop-color="#fff" stop-opacity="0"></stop>
         </radialGradient>
+        <!-- mask:蒙版 -->
         <mask :id="maskId">
-          <circle :r="starLength" cx="0" cy="0" :fill="`url(#${radialGradientId})`">
+          <circle :r="startLength" cx="0" cy="0" :fill="`url(#${radialGradientId})`">
             <animateMotion :dur="`${duration}s`" :path="path" rotate="auto" repeatCount="indefinite"></animateMotion>
           </circle>
         </mask>
       </defs>
       <use :href="`#${pathId}`" stroke-width="1" :stroke="lineColor"></use>
-      <use :href="`#${pathId}`" stroke-width="3" :stroke="starColor" :mask="`url(#${maskId})`"></use>
+      <use :href="`#${pathId}`" stroke-width="3" :stroke="startColor" :mask="`url(#${maskId})`"></use>
     </svg>
     <div class="thunder-fly-box-content">
       <slot></slot>
@@ -32,11 +35,11 @@ export default {
       type: String,
       default: '#235fa7',
     },
-    starColor: {
+    startColor: {
       type: String,
       default: '#4fd2dd',
     },
-    starLength: {
+    startLength: {
       type: [Number, String],
       default: 50,
     },

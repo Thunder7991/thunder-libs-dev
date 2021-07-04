@@ -74,7 +74,6 @@ export default {
     },
   },
   setup(props, ctx) {
-    console.log(props);
     const outsideColorAnimation = computed(() => `${props.outsideColor};${props.insideColor};${props.outsideColor}`);
     const insideColorAnimation = computed(() => `${props.insideColor};${props.outsideColor};${props.insideColor}`);
 

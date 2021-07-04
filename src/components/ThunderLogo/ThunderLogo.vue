@@ -32,7 +32,6 @@ export default {
   setup(props, ctx) {
     onMounted(() => {
       const logo = document.getElementsByClassName('thunder-logo1')[0];
-      console.log(logo.getTotalLength()); //3239
     });
     return {};
   },

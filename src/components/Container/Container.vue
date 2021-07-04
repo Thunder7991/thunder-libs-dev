@@ -38,7 +38,6 @@ export default {
           if (!originalWidth.value || !originalHeight.value) {
             //在没有复制的情况下调用次函数
             originalWidth.value = window.screen.width;
-            console.log(originalWidth.value);
             originalHeight.value = window.screen.height;
           }
           resolve();
